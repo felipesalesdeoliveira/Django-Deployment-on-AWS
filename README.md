@@ -1,4 +1,4 @@
-# 🚀 Production-Ready Django Deployment on AWS  
+# 🚀 Django Deployment on AWS  
 ## Complete ECS & ECR DevOps Pipeline
 
 ![AWS](arquitetura_project-04.png)
