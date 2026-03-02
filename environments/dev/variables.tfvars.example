@@ -1,0 +1,30 @@
+aws_region           = "us-east-1"
+project_name         = "django-ecs"
+environment          = "dev"
+
+vpc_cidr             = "10.30.0.0/16"
+public_subnet_cidrs  = ["10.30.1.0/24", "10.30.2.0/24"]
+private_subnet_cidrs = ["10.30.11.0/24", "10.30.12.0/24"]
+single_nat_gateway   = true
+
+ecr_repository_name  = "django-ecs-app"
+ecr_keep_last_images = 20
+
+container_image      = ""
+container_port       = 8000
+task_cpu             = 512
+task_memory          = 1024
+
+service_desired_count = 2
+service_min_capacity  = 2
+service_max_capacity  = 6
+
+health_check_path    = "/"
+alb_ingress_cidrs    = ["0.0.0.0/0"]
+certificate_arn      = null
+
+django_allowed_hosts = "*"
+django_debug         = "False"
+django_secret_key    = "CHANGE_ME"
+database_url         = ""
+redis_url            = ""
